@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="main">
+      <section class="shop-item">
+        <div class="container">
+          <div class="shop-item__content">
+            <div class="shop-item__img">
+              <div class="shop-item__small">
+                <img src="./img/Img-small-for-itemStore.png" alt="img" />
+                <img src="./img/Img-small-for-itemStore.png" alt="img" />
+                <img src="./img/Img-small-for-itemStore.png" alt="img" />
+                <img src="./img/Img-small-for-itemStore.png" alt="img" />
+              </div>
+              <div class="shop-item__big">
+                <img src="./img/Img-big-for-itemStore.png" alt="img" />
+              </div>
+            </div>
+            <div class="shop-item__info">
+              <h2 class="shop-item__info-title">Lira Earrings</h2>
+              <h4 class="shop-item__info-price">$ 20,00</h4>
+              <div class="shop-item__info-rate">
+                <img src="./img/icons/star-icon.svg" alt="star" />
+                <img src="./img/icons/star-icon.svg" alt="star" />
+                <img src="./img/icons/star-icon.svg" alt="star" />
+                <img src="./img/icons/star-icon.svg" alt="star" />
+                <img src="./img/icons/star-icon.svg" alt="star" />
+                <p class="shop-item__info-view">1 customer review</p>
+              </div>
+              <p class="shop-item__info-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a
+                volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero.
+                Sed quis mauris eget arcu facilisis consequat sed eu felis.
+              </p>
+              <div class="shop-item__counter-box">
+                <div class="shop-item__counter">
+                  <button class="shop-item__btn" id="increment">-</button>
+                  <span class="shop-item__number" id="result">1</span>
+                  <button class="shop-item__btn" id="decrement">+</button>
+                </div>
+                <button class="shop-item__counter-btn">ADD TO CART</button>
+              </div>
+              <div class="shop-item__adds">
+                <div class="shop-item__adds-box">
+                  <a href="#"><img src="./img/icons/grey-heart.svg" alt="heart" /></a>
+                  <a href="#"><img src="./img/icons/gmail.svg.svg" alt="gmail" /></a>
+                  <a href="#"><img src="./img/icons/faceboock.svg" alt="faceboock" /></a>
+                  <a href="#"><img src="./img/icons/insta.svg" alt="insta" /></a>
+                  <a href="#"> <img src="./img/icons/twitter.svg" alt="twitter" /></a>
+                </div>
+                <div class="shop-item__adds-text">
+                  <p class="shop-item__adds-text-name">
+                    SKU:
+                    <span class="shop-item__adds-text-number">12</span>
+                  </p>
+                  <p class="shop-item__adds-text-name">
+                    Categories:
+                    <span class="shop-item__adds-text-number">Fashion, Style</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tabs">
+        <div class="container">
+          <div class="tabs__nav">
+            <button class="tabs__nav-btn">Description</button>
+            <button class="tabs__nav-btn">Aditional information</button>
+            <button class="tabs__nav-btn">Reviews(0)</button>
+          </div>
+          <div class="tabs__content">
+            <div class="tab1__content">
+              <p class="tab1__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores accusantium
+                repellat dolor, culpa, exercitationem est commodi vel nisi officia eaque, eos
+                adipisci? Aspernatur iusto id, nam qui perferendis, quia molestiae magni hic
+                doloremque animi vel odio explicabo ex, deleniti dignissimos repellendus voluptates
+                ipsa laborum distinctio inventore dolore natus sequi! Deserunt.
+              </p>
+            </div>
+            <div class="tab2__content">
+              <p class="shop-item__adds-text-name">
+                Weight:
+                <span class="shop-item__adds-text-number">0.3 kg</span>
+              </p>
+              <p class="shop-item__adds-text-name">
+                Dimentions:
+                <span class="shop-item__adds-text-number"> 15 x 10 x 1 cm</span>
+              </p>
+              <p class="shop-item__adds-text-name">
+                Colours:
+                <span class="shop-item__adds-text-number">Black, Browns, White</span>
+              </p>
+              <p class="shop-item__adds-text-name">
+                Material:
+                <span class="shop-item__adds-text-number">Metal</span>
+              </p>
+            </div>
+            <div class="tab3__content">
+              <div class="tab3__rate">
+                <h2 class="tab3__rate-title">2 Reviews for lira earings</h2>
+                <div class="tab3__rate-box">
+                  <div class="tab3__text-box">
+                    <h3 class="tab3__rate-box-title">Scarlet withch</h3>
+                    <p class="tab3__rate-box-descr">6 May, 2020</p>
+                  </div>
+                  <div class="tab3__star">
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/empty-star.svg" alt="" />
+                    <img src="./img/icons/empty-star.svg" alt="" />
+                  </div>
+                  <p class="tab3__text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet.
+                  </p>
+                </div>
+                <div class="tab3__rate-box">
+                  <div class="tab3__text-box">
+                    <h3 class="tab3__rate-box-title">Scarlet withch</h3>
+                    <p class="tab3__rate-box-descr">6 May, 2020</p>
+                  </div>
+                  <div class="tab3__star">
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/star-icon.svg" alt="star" />
+                    <img src="./img/icons/empty-star.svg" alt="" />
+                    <img src="./img/icons/empty-star.svg" alt="" />
+                  </div>
+                  <p class="tab3__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat natus illo vel
+                    laboriosam quasi quisquam quam nihil. Iste tempora obcaecati distinctio cum,
+                    ducimus laborum quis explicabo sequi perferendis dicta officiis?
+                  </p>
+                </div>
+              </div>
+              <div class="tab3__review">
+                <h2 class="tab3__review-title">Add a Review</h2>
+                <p class="tab3__review-text">
+                  Your email address will not be published. Required fields are marked *
+                </p>
+                <form class="tab3__form">
+                  <div class="tab3__form-box">
+                    <input type="text" placeholder="Your Review*" />
+                    <input type="text" placeholder="Enter your name*" />
+                    <input type="text" placeholder="Enter your Email*" />
+                  </div>
+                  <div class="tab3__form-check">
+                    <input type="checkbox" />
+                    <p class="tab3__review-text">
+                      Save my name, email, and website in this browser for the next time I comment
+                    </p>
+                  </div>
+                </form>
+                <div class="tab3__rating-box">
+                  <p class="tab3__rating-text">Your Rating*</p>
+                  <div class="tab3__rating-star" id="ratingStars">
+                    <button class="star-btn" data-index="0">
+                      <img src="./img/icons/empty-star.svg" alt="heart-icon" class="star" />
+                    </button>
+                    <button class="star-btn" data-index="1">
+                      <img src="./img/icons/empty-star.svg" alt="heart-icon" class="star" />
+                    </button>
+                    <button class="star-btn" data-index="2">
+                      <img src="./img/icons/empty-star.svg" alt="heart-icon" class="star" />
+                    </button>
+                    <button class="star-btn" data-index="3">
+                      <img src="./img/icons/empty-star.svg" alt="heart-icon" class="star" />
+                    </button>
+                    <button class="star-btn" data-index="4">
+                      <img src="./img/icons/empty-star.svg" alt="heart-icon" class="star" />
+                    </button>
+                  </div>
+                </div>
+                <button class="tab3__btn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>

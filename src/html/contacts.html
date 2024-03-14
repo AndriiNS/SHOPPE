@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="main">
+      <div class="container">
+        <div class="contacts__content">
+          <h1 class="contacts__title">Contact Us</h1>
+          <p class="contacts__text">
+            Say Hello send us your thoughts about our products or share your ideas with our Team!
+          </p>
+          <form class="contacts__form" action="#">
+            <input type="text" placeholder="First name" class="contacts__form-name" />
+            <input type="text" placeholder="Last name" class="contacts__form-surname" />
+            <input type="email" placeholder="Email" class="contacts__form-email" />
+            <div class="contacts__form-box">
+              <input
+                type="text"
+                placeholder="Subject"
+                class="contacts__form-subject"
+                id="subjectInput"
+                onkeyup="filterFunction()"
+              />
+              <button class="arrow-down" id="dropdownButton" type="button">
+                <img src="./img/icons/arrow-down.svg" alt="peek items" />
+              </button>
+              <div class="subject__drop" id="dropDown">
+                <p class="subject__drop-item">Lira Earrings</p>
+                <p class="subject__drop-item">Hal Earrings</p>
+                <p class="subject__drop-item">Kaede Hair Pin Set Of 3</p>
+                <p class="subject__drop-item">Hair Pin Set of 3</p>
+                <p class="subject__drop-item">Plaine Necklace</p>
+                <p class="subject__drop-item">Yuki Hair Pin Set of 3</p>
+              </div>
+            </div>
+            <input type="text" class="contacts__form-message" placeholder="Message" />
+          </form>
+          <button class="footer__form-btn" type="submit">Send</button>
+        </div>
+      </div>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>

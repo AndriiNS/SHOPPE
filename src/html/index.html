@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <img src="./img/Shelly-preloader.png" alt="" class="preloader-shelly" />
+      <div class="line-preloader"></div>
+      <img src="./img/Theme-preloader.png" alt="" class="preloader-theme" />
+    </div>
+    @@include('blocks/header.html')
+    <main class="main">@@include('blocks/slider.html') @@include('blocks/items.html')</main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>

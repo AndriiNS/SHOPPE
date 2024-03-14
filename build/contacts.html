@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__row">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/SHOPPE.png" alt="logo" /></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="./store.html" class="header__link">Shop</a></li>
+          <li class="header__item"><a href="#" class="header__link">Blog</a></li>
+          <li class="header__item"><a href="#" class="header__link">Our Story</a></li>
+        </ul>
+        <ul class="header__icons">
+          <li class="header__icon">
+            <a href="#" class="header__icon-list">
+              <img src="./img/icons/search-icon.svg" alt="search" />
+            </a>
+          </li>
+          <li class="header__icon">
+            <a href="#" class="header__icon-list">
+              <img src="./img/icons/shopping-cart.svg" alt="shopping-cart" />
+            </a>
+          </li>
+          <li class="header__icon">
+            <a href="#" class="header__icon-list"><img src="./img/icons/user.svg" alt="user" /></a>
+          </li>
+        </ul>
+      </nav>
+      <button class="mobile-nav-btn">
+        <div class="nav-icon"></div>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav">
+	<ul class="mobile-nav__list">
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#!">Services</a></li>
+		<li><a href="#!">About</a></li>
+		<li><a href="#!">Projects</a></li>
+		<li><a href="#!">Contact</a></li>
+	</ul>
+</div>
+
+
+    <main class="main">
+      <div class="container">
+        <div class="contacts__content">
+          <h1 class="contacts__title">Contact Us</h1>
+          <p class="contacts__text">
+            Say Hello send us your thoughts about our products or share your ideas with our Team!
+          </p>
+          <form class="contacts__form" action="#">
+            <input type="text" placeholder="First name" class="contacts__form-name" />
+            <input type="text" placeholder="Last name" class="contacts__form-surname" />
+            <input type="email" placeholder="Email" class="contacts__form-email" />
+            <div class="contacts__form-box">
+              <input
+                type="text"
+                placeholder="Subject"
+                class="contacts__form-subject"
+                id="subjectInput"
+                onkeyup="filterFunction()"
+              />
+              <button class="arrow-down" id="dropdownButton" type="button">
+                <img src="./img/icons/arrow-down.svg" alt="peek items" />
+              </button>
+              <div class="subject__drop" id="dropDown">
+                <p class="subject__drop-item">Lira Earrings</p>
+                <p class="subject__drop-item">Hal Earrings</p>
+                <p class="subject__drop-item">Kaede Hair Pin Set Of 3</p>
+                <p class="subject__drop-item">Hair Pin Set of 3</p>
+                <p class="subject__drop-item">Plaine Necklace</p>
+                <p class="subject__drop-item">Yuki Hair Pin Set of 3</p>
+              </div>
+            </div>
+            <input type="text" class="contacts__form-message" placeholder="Message" />
+          </form>
+          <button class="footer__form-btn" type="submit">Send</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__top">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="./contacts.html" class="footer__link">CONTACT</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">TERMS OF SERVICES</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">SHIPPING AND RETURNS</a></li>
+          </ul>
+        </nav>
+        <form class="footer__form">
+          <input
+            type="text"
+            class="footer__input"
+            placeholder="Give an email, get the newsletter."
+          />
+          <button class="footer__btn">
+            <img src="./img/icons/input-arrow.svg" alt="submit" />
+          </button>
+        </form>
+      </div>
+      <div class="footer__botoom">
+        <a href="#" class="footer__policy">
+          <span style="color: #000">© 2021 Shelly</span>. Terms of use
+          <span style="color: #000">and</span> privacy policy.
+        </a>
+        <div class="footer__contacts">
+          <a href="#" class="footer__contacts-link">
+            <img src="./img/icons/linked.svg" alt="linked" />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img src="./img/icons/insta.svg" alt="insta" />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img src="./img/icons/faceboock.svg" alt="faceboock" />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img src="./img/icons/twitter.svg" alt="twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>
