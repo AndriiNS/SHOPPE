@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="main">
+      <div class="container">
+        <form class="account active-form">
+          <div class="account__content">
+            <h2 class="account__title">My account</h2>
+            <div class="account__btns">
+              <button type="button" class="account__button btn-active">Sign in</button>
+              <button type="button" class="account__button">Register</button>
+            </div>
+            <input type="email" class="account__email" placeholder="Email" />
+            <input type="password" class="account__password" placeholder="Password" />
+            <div class="account__remember">
+              <input type="checkbox" id="rememberCheckbox" class="account__checkbox" />
+              <label for="rememberCheckbox">Remember me</label>
+            </div>
+            <button class="account__btn-sign">Sign in</button>
+            <a href="./forgot-password.html" class="accoutn__forgot">
+              Have you forgotten your password?
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>

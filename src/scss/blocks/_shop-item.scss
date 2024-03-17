@@ -399,3 +399,49 @@
 .star-btn .active-star {
   content: url("./../img/icons/star-icon.svg");
 }
+.active-tab {
+  position: relative;
+  color: #000;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 2px;
+    background-color: #000;
+    left: 0;
+    margin-bottom: -40px;
+  }
+}
+.tabs__content > div {
+  display: none;
+  animation: fadeEffect 1s ease-in-out;
+}
+
+.tabs__content > div.active-tab__content {
+  display: grid;
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+//========================================================================================================================================================
+//similar
+.similar-items {
+  margin-bottom: 250px;
+}
+.similar__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  padding-bottom: 45px;
+}
+.similar__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+}

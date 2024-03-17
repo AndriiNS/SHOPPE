@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHOPPE</title>
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
@@ -62,39 +62,25 @@
 
     <main class="main">
       <div class="container">
-        <div class="contacts__content">
-          <h1 class="contacts__title">Contact Us</h1>
-          <p class="contacts__text">
-            Say Hello send us your thoughts about our products or share your ideas with our Team!
-          </p>
-          <form class="contacts__form" action="#">
-            <input type="text" placeholder="First name" class="contacts__form-name" />
-            <input type="text" placeholder="Last name" class="contacts__form-surname" />
-            <input type="email" placeholder="Email" class="contacts__form-email" />
-            <div class="contacts__form-box">
-              <input
-                type="text"
-                placeholder="Subject"
-                class="contacts__form-subject"
-                id="subjectInput"
-                onkeyup="filterFunction()"
-              />
-              <button class="arrow-down" id="dropdownButton" type="button">
-                <img src="./img/icons/arrow-down.svg" alt="peek items" />
-              </button>
-              <div class="subject__drop" id="dropDown">
-                <p class="subject__drop-item">Lira Earrings</p>
-                <p class="subject__drop-item">Hal Earrings</p>
-                <p class="subject__drop-item">Kaede Hair Pin Set Of 3</p>
-                <p class="subject__drop-item">Hair Pin Set of 3</p>
-                <p class="subject__drop-item">Plaine Necklace</p>
-                <p class="subject__drop-item">Yuki Hair Pin Set of 3</p>
-              </div>
+        <form class="account active-form">
+          <div class="account__content">
+            <h2 class="account__title">My account</h2>
+            <div class="account__btns">
+              <button type="button" class="account__button btn-active">Sign in</button>
+              <button type="button" class="account__button">Register</button>
             </div>
-            <input type="text" class="contacts__form-message" placeholder="Message" />
-          </form>
-          <button class="footer__form-btn" type="submit">Send</button>
-        </div>
+            <input type="email" class="account__email" placeholder="Email" />
+            <input type="password" class="account__password" placeholder="Password" />
+            <div class="account__remember">
+              <input type="checkbox" id="rememberCheckbox" class="account__checkbox" />
+              <label for="rememberCheckbox">Remember me</label>
+            </div>
+            <button class="account__btn-sign">Sign in</button>
+            <a href="./forgot-password.html" class="accoutn__forgot">
+              Have you forgotten your password?
+            </a>
+          </div>
+        </form>
       </div>
     </main>
     <footer class="footer">

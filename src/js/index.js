@@ -2,54 +2,51 @@ import mobileNav from "./modules/mobile-nav.js";
 mobileNav();
 //========================================================================================================================================================
 //preloader
+// #region preloader
 import { gsap } from "gsap";
-var tl = gsap.timeline();
 
-// Анімація для preloader-shelly: початок з'явлення, рух до центру, рух вправо та зникнення
-tl.from(".preloader-shelly", { duration: 1.5, x: "-300%", opacity: 0 })
-  .to(".preloader-shelly", { duration: 1.5, x: "0%", opacity: 1 })
-  .to(".preloader-shelly", { duration: 1.5, x: "300%", opacity: 0 });
+const preloaderElement = document.querySelector(".preloader");
 
-// Анімація для line-preloader: початок з'явлення і рух до центру
-tl.from(".line-preloader", { duration: 1, y: "300%", opacity: 0 }, 0).to(
-  ".line-preloader",
-  { duration: 1, y: "0%", opacity: 1 },
-  0
-);
+if (preloaderElement) {
+  if (!sessionStorage.getItem("preloaderShown")) {
+    // Створення нового timeline
+    var tl = gsap.timeline();
 
-tl.from(".preloader-theme", { duration: 1.5, x: "300%", opacity: 0 }, 0)
-  .to(".preloader-theme", { duration: 1.5, x: "0%", opacity: 1 }, 0)
-  .to(".preloader-theme", { duration: 1.5, x: "-300%", opacity: 0 });
+    // Анімація для preloader-shelly: початок з'явлення, рух до центру, рух вправо та зникнення
+    tl.from(".preloader-shelly", { duration: 1.5, x: "-300%", opacity: 0 })
+      .to(".preloader-shelly", { duration: 1.5, x: "0%", opacity: 1 })
+      .to(".preloader-shelly", { duration: 1.5, x: "300%", opacity: 0 });
 
-tl.to(".line-preloader", { duration: 0.5, y: "110%", opacity: 0 }).to(".preloader", {
-  duration: 1,
-  opacity: 0,
-  zIndex: -100
-});
-// gsap
-//   .timeline()
-//   // Поява preloader-shelly та анімація руху вліво
-//   .from(".preloader-shelly", { duration: 1, x: "100%", opacity: 0, ease: "power1.inOut" })
-//   // Затримка на дві секунди
-//   .to({}, { duration: 2 })
-//   // Прискорення preloader-shelly та рух за екран
-//   .to(".preloader-shelly", { duration: 0.5, x: "-200%", opacity: 0, ease: "power1.inOut" })
-//   // Поява line-preloader
-//   .to(".line-preloader", { duration: 0.5, opacity: 1 })
-//   // Поява preloader-theme та анімація руху вправо
-//   .from(".preloader-theme", { duration: 0.5, x: "-100%", opacity: 0, ease: "power1.inOut" })
-//   .to(".preloader-theme", { duration: 0.5, x: "0%", ease: "power1.inOut" })
-//   // Зникнення прелоадера
-//   .to(".preloader", {
-//     duration: 0.5,
-//     opacity: 0,
-//     onComplete: function () {
-//       // Після завершення анімації видалити прелоадер з DOM
-//       document.querySelector(".preloader").remove();
-//     }
-//   });
+    // Анімація для line-preloader: початок з'явлення і рух до центру
+    tl.from(".line-preloader", { duration: 1, y: "300%", opacity: 0 }, 0).to(
+      ".line-preloader",
+      { duration: 1, y: "0%", opacity: 1 },
+      0
+    );
+
+    tl.from(".preloader-theme", { duration: 1.5, x: "300%", opacity: 0 }, 0)
+      .to(".preloader-theme", { duration: 1.5, x: "0%", opacity: 1 }, 0)
+      .to(".preloader-theme", { duration: 1.5, x: "-300%", opacity: 0 });
+
+    tl.to(".line-preloader", { duration: 0.5, y: "110%", opacity: 0 }).to(".preloader", {
+      duration: 1,
+      opacity: 0,
+      zIndex: -100
+    });
+
+    // Зміна видимості прелоадера
+    preloaderElement.style.visibility = "visible";
+
+    // Встановлення прапорця, що прелоадер вже відображався
+    sessionStorage.setItem("preloaderShown", "true");
+  } else {
+    // Якщо прелоадер вже відображався, просто ховаємо його
+    preloaderElement.style.display = "none";
+  }
+}
+// #endregion
 //========================================================================================================================================================
-
+// #region swiper
 import Swiper from "swiper/bundle";
 
 // import styles bundle
@@ -62,8 +59,10 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination"
   }
 });
+
+// #endregion
 //========================================================================================================================================================
-//downmenu
+// #region downmenu
 const inputElement = document.getElementById("subjectInput");
 if (inputElement) {
   const inputElement = document.getElementById("subjectInput"); // Змінено ім'я змінної на inputElement
@@ -104,7 +103,7 @@ if (inputElement) {
 } else {
   console.log("Елемент з id 'subjectInput' не знайдений на цій сторінці.");
 }
-
+// #endregion
 //========================================================================================================================================================
 // document.querySelector(".contacts__form").addEventListener("submit", function (event) {
 //   event.preventDefault(); // Це запобіжить перезавантаженню сторінки
@@ -124,45 +123,93 @@ if (inputElement) {
 //     });
 // });
 //========================================================================================================================================================
-//counter
-const increment = document.getElementById("increment");
-const decrement = document.getElementById("decrement");
-const countResult = document.getElementById("result");
-let currentValue = 1;
-const minValue = 1;
-const maxValue = 6;
-function counter(newValue) {
-  if (newValue >= minValue && newValue <= maxValue) {
-    currentValue = newValue;
-    countResult.textContent = newValue;
+// #region counter
+document.addEventListener("DOMContentLoaded", function () {
+  const increment = document.getElementById("increment");
+  const decrement = document.getElementById("decrement");
+  const countResult = document.getElementById("result");
+
+  // Перевірка наявності елементів на сторінці
+  if (increment && decrement && countResult) {
+    let currentValue = 1;
+    const minValue = 1;
+    const maxValue = 6;
+
+    function counter(newValue) {
+      if (newValue >= minValue && newValue <= maxValue) {
+        currentValue = newValue;
+        countResult.textContent = newValue;
+      }
+    }
+
+    increment.addEventListener("click", () => {
+      counter(currentValue + 1);
+    });
+
+    decrement.addEventListener("click", () => {
+      counter(currentValue - 1);
+    });
   }
-}
-
-increment.addEventListener("click", () => {
-  counter(currentValue - 1);
 });
-decrement.addEventListener("click", () => {
-  counter(currentValue + 1);
-});
+//  #endregion
 //========================================================================================================================================================
-//stars
-const ratingStars = document.getElementById("ratingStars");
-const starButtons = ratingStars.querySelectorAll(".star-btn");
+// #region stars
 
-starButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const selectedIndex = parseInt(button.dataset.index);
+document.addEventListener("DOMContentLoaded", function () {
+  const ratingStars = document.getElementById("ratingStars");
 
-    // Змінюємо класи всіх зірок до поточної включно
-    for (let i = 0; i <= selectedIndex; i++) {
-      starButtons[i].querySelector(".star").classList.add("active-star");
-    }
-    // Змінюємо класи всіх зірок після поточної
-    for (let i = selectedIndex + 1; i < starButtons.length; i++) {
-      starButtons[i].querySelector(".star").classList.remove("active-star");
-    }
+  // Перевірка наявності елемента на сторінці
+  if (ratingStars) {
+    const starButtons = ratingStars.querySelectorAll(".star-btn");
+
+    starButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedIndex = parseInt(button.dataset.index);
+
+        // Змінюємо класи всіх зірок до поточної включно
+        for (let i = 0; i <= selectedIndex; i++) {
+          starButtons[i].querySelector(".star").classList.add("active-star");
+        }
+        // Змінюємо класи всіх зірок після поточної
+        for (let i = selectedIndex + 1; i < starButtons.length; i++) {
+          starButtons[i].querySelector(".star").classList.remove("active-star");
+        }
+      });
+    });
+  }
+});
+// #endregion
+//========================================================================================================================================================
+// #region tabs
+document.addEventListener("DOMContentLoaded", function () {
+  const tabsBtns = document.querySelectorAll(".tabs__nav-btn");
+  const tabsContents = document.querySelectorAll(".tabs__content > div");
+
+  tabsBtns.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      // Видаляємо клас 'active-tab' у всіх кнопок табів
+      tabsBtns.forEach((btn) => btn.classList.remove("active-tab"));
+      // Видаляємо клас 'active-tab__content' у всіх блоків вмісту табів
+      tabsContents.forEach((content) => content.classList.remove("active-tab__content"));
+
+      // Додаємо клас 'active-tab' лише тій кнопці табу, на яку було клікнуто
+      button.classList.add("active-tab");
+      // Додаємо клас 'active-tab__content' відповідному блоку вмісту табу
+      tabsContents[index].classList.add("active-tab__content");
+    });
   });
 });
+//#endregion
 //========================================================================================================================================================
-//tabs
-const tabsBtn = document.querySelector(".tabs__nav-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  const accountBtn = document.querySelectorAll(".account__button");
+
+  accountBtn.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      accountBtn.forEach(function (button) {
+        button.classList.remove("btn-active");
+      });
+      btn.classList.add("btn-active");
+    });
+  });
+});
