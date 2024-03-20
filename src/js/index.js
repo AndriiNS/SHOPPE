@@ -213,3 +213,104 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+//========================================================================================================================================================
+//#region form
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".blog-single__reply-form");
+  const nameInput = form ? form.querySelector('input[type="name"]') : null;
+  const emailInput = form ? form.querySelector('input[type="email"]') : null;
+  const websiteInput = form ? form.querySelector('input[type="website"]') : null;
+  const commentInput = form ? form.querySelector('input[type="text"]') : null;
+
+  // Перевірка чи всі елементи були знайдені
+  if (!form || !nameInput || !emailInput || !websiteInput || !commentInput) {
+    console.log("One or more form elements not found.");
+    return; // Вихід з функції, якщо не всі елементи були знайдені
+  }
+
+  const requiredFieldsMessage = document.createElement("p");
+  requiredFieldsMessage.classList.add("required-fields-message");
+  requiredFieldsMessage.textContent = "Please fill in all required fields.";
+  form.appendChild(requiredFieldsMessage);
+  requiredFieldsMessage.style.display = "none";
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (
+      nameInput.value.trim() === "" ||
+      emailInput.value.trim() === "" ||
+      commentInput.value.trim() === ""
+    ) {
+      requiredFieldsMessage.style.display = "block";
+      requiredFieldsMessage.style.color = "red";
+      return;
+    }
+    requiredFieldsMessage.style.display = "none";
+
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const website = websiteInput.value;
+    const comment = commentInput.value;
+
+    const newComment = document.createElement("div");
+    newComment.classList.add("blog-single__comments-comment");
+    newComment.innerHTML = `
+          <img src="./img/icons/comment-img.svg" alt="img" />
+          <div class="blog-single__comment-inner">
+              <div class="blog-single__comment-nameBox">
+                  <div class="blog-single__reply-inner">
+                      <h3 class="blog-single__comment-name">${name}</h3>
+                      <p class="blog-single__comment-date">${new Date().toLocaleDateString()}</p>
+                  </div>
+                  <button class="blog-single__comment-reply">Reply</button>
+              </div>
+              <p class="blog-single__comments-text">${comment}</p>
+          </div>
+      `;
+
+    const commentsSection = document.querySelector(".blog-single__comments");
+    commentsSection.appendChild(newComment);
+
+    // Очищення введених даних у формі
+    nameInput.value = "";
+    emailInput.value = "";
+    websiteInput.value = "";
+    commentInput.value = "";
+  });
+});
+//#endregion
+//========================================================================================================================================================
+//#region tabsBlog
+document.addEventListener("DOMContentLoaded", function () {
+  const tabsBlogBtns = document.querySelectorAll(".blog-content__btn");
+  const tabsBlogContent = document.querySelectorAll(".blog__content");
+
+  function openTab(event, tabIndex) {
+    tabsBlogContent.forEach(function (content, index) {
+      if (index === tabIndex) {
+        content.classList.add("blog__content-active");
+      } else {
+        content.classList.remove("blog__content-active");
+      }
+    });
+
+    tabsBlogBtns.forEach(function (tabBtn, index) {
+      if (index === tabIndex) {
+        tabBtn.classList.add("active-nav__btn");
+      } else {
+        tabBtn.classList.remove("active-nav__btn");
+      }
+    });
+  }
+
+  // Додавання обробників подій для кнопок
+  tabsBlogBtns.forEach(function (btn, index) {
+    btn.addEventListener("click", function (event) {
+      openTab(event, index);
+    });
+  });
+});
+
+//#endregion

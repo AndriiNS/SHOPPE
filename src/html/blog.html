@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPE</title>
+    <link rel="icon" href="./img/SH.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="main">
+      <section class="blog">
+        <div class="container">
+          <h1 class="blog__title">Blog</h1>
+          <div class="blog__inner">
+            <aside class="blog__aside">
+              <div class="search__box">
+                <input type="text" placeholder="Serch" />
+                <img src="./img/icons/search-icon.svg" alt="img" />
+              </div>
+              <div class="blog__categories">
+                <h2 class="blog__categories-title">Categories</h2>
+                <div class="ul blog__categories-list">
+                  <li class="blog__categories">Fashion</li>
+                  <li class="blog__categories">Style</li>
+                  <li class="blog__categories">Accessories</li>
+                  <li class="blog__categories">Season</li>
+                </div>
+              </div>
+            </aside>
+            <div class="blog__content blog__content-active">
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-single.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-2.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-3.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-4.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+            </div>
+            <div class="blog__content">
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-3.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-4.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-single.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+              <div class="blog__content-item content-item">
+                <img src="./img/blog-2.png" alt="img" />
+                <p class="content-item__date">Fashion - October 8, 2020</p>
+                <a href="./blog-single.html" class="content-item__title">Top Trends From Spring</a>
+                <p class="content-item__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. faucibus augue, a maximus
+                  elit ex vitae libero...
+                </p>
+                <a href="./blog-single.html" class="content-item__link">Read More</a>
+              </div>
+            </div>
+            <div class="blog-content__nav">
+              <button class="blog-content__btn active-nav__btn" onclick="openTab(event, 0)">
+                1
+              </button>
+              <button class="blog-content__btn" onclick="openTab(event, 1)">2</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>

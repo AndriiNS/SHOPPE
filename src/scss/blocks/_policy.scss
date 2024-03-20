@@ -1,0 +1,101 @@
+.policy {
+  // .policy__container
+
+  &__container {
+    max-width: 670px;
+    margin: 0 auto;
+    padding-top: 100px;
+    position: relative;
+    padding-bottom: 250px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #d8d8d8;
+    }
+  }
+
+  // .policy__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  // .policy__top
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  // .policy__title
+
+  &__title {
+    text-align: center;
+    font-size: 33px;
+    line-height: 43px;
+    font-weight: 500;
+  }
+
+  // .policy__text
+
+  &__text {
+    line-height: 27px;
+  }
+
+  // .policy__security
+
+  &__security {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // .policy__security-title
+
+  &__security-title {
+    font-size: 26px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+
+  // .policy__security-text
+
+  &__security-text {
+    line-height: 27px;
+  }
+
+  // .policy__Coockies
+
+  &__Coockies {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // .policy__Coockies-title
+
+  &__Coockies-title {
+    font-size: 26px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+
+  // .policy__Coockies-list
+
+  &__Coockies-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .policy__Coockies-item
+
+  &__Coockies-item {
+    line-height: 27px;
+  }
+}
