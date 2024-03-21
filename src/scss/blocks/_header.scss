@@ -94,7 +94,19 @@
   border: 1px solid #a18a68;
   margin: 20px 0;
 }
-.preloader-shelly {
-}
-.preloader-theme {
+// .preloader-shelly {
+// }
+// .preloader-theme {
+// }
+.header__link-active {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -27px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    left: 0;
+  }
 }
