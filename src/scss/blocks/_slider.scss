@@ -33,6 +33,13 @@
 
   &__img {
     min-height: 646px;
+    @media (max-width: 600px) {
+      min-height: 299px;
+    }
+    @media (max-width: 455px) {
+      content: url("./../img/mobile-slider.png");
+      width: 100%;
+    }
   }
 
   // .slider__prise

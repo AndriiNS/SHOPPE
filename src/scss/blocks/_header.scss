@@ -14,6 +14,10 @@
   &__nav {
     display: flex;
     gap: 90px;
+    align-items: center;
+    @media (max-width: 780px) {
+      display: none;
+    }
   }
 
   // .header__list
@@ -103,10 +107,11 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -27px;
+    bottom: -29px;
     width: 100%;
     height: 2px;
     background-color: #000;
     left: 0;
+    z-index: 1;
   }
 }

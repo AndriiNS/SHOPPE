@@ -88,6 +88,8 @@ import "swiper/css/bundle";
 const swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 1,
+  spaceBetween: 100,
+  centeredSlides: true,
   pagination: {
     el: ".swiper-pagination"
   }
