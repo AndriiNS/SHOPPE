@@ -40,7 +40,7 @@
     grid-template-columns: 377px 377px 377px;
     grid-column-gap: 57px;
     grid-row-gap: 80px;
-    @media (max-width: 750px) {
+    @media (max-width: 1300px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
     }

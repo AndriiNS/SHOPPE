@@ -29,17 +29,17 @@
         </ul>
         <ul class="header__icons">
           <li class="header__icon">
-            <a href="#" class="header__icon-list">
+            <a href="#" class="header__link">
               <img src="./img/icons/search-icon.svg" alt="search" />
             </a>
           </li>
           <li class="header__icon">
-            <a href="./shopping-cart.html" class="header__icon-list">
+            <a href="./shopping-cart.html" class="header__link">
               <img src="./img/icons/shopping-cart.svg" alt="shopping-cart" />
             </a>
           </li>
           <li class="header__icon">
-            <a href="./account.html" class="header__icon-list">
+            <a href="./account.html" class="header__link">
               <img src="./img/icons/user.svg" alt="user" />
             </a>
           </li>
@@ -52,39 +52,135 @@
   </div>
 </header>
 <div class="mobile-nav">
-	<ul class="mobile-nav__list">
-		<li><a href="#" class="active">Home</a></li>
-		<li><a href="#!">Services</a></li>
-		<li><a href="#!">About</a></li>
-		<li><a href="#!">Projects</a></li>
-		<li><a href="#!">Contact</a></li>
-	</ul>
+  <ul class="mobile-nav__list">
+    <li><a href="./store.html">Shop</a></li>
+    <li><a href="./blog.html">Blog</a></li>
+    <li><a href="./about.html">Our Story</a></li>
+    <div class="mobile-nav__box">
+      <li>
+        <a href="./search.html"><img src="./img/icons/search-icon.svg" alt="search-icon" /></a>
+      </li>
+      <li>
+        <a href="./shopping-cart.html"
+          ><img src="./img/icons/shopping-cart.svg" alt="shopping-cart"
+        /></a>
+      </li>
+      <li>
+        <a href="./account.html"><img src="./img/icons/user.svg" alt="user" /></a>
+      </li>
+    </div>
+  </ul>
 </div>
 
 
     <main class="main">
       <section class="shopping">
         <div class="container">
-          <h1 class="shopping__title"></h1>
+          <h1 class="shopping__title">Shopping-cart</h1>
           <div class="shopping__content">
             <div class="shopping__items">
-              <div class="shopping__item">
-                <img src="./img/Img01.png" alt="img" />
-                <div class="shopping__item-box">
-                  <h3 class="shopping__item-title">Lira Earrings</h3>
-                  <h4 class="shopping__item-subtitle">Black / Medium</h4>
-                  <h4 class="shopping__item-subtitle">$ 20,00</h4>
-                </div>
-                <div class="shopping__item-counter counter__item">
-                  <div class="counter__item-box">
-                    <button class="counter__item-btn" id="decrement">-</button>
-                    <span class="counter__item-number" id="result">1</span>
-                    <button class="counter__item-btn" id="increment">+</button>
+              <div class="shopping__items-inner">
+                <div class="shopping__item">
+                  <img src="./img/Img01.png" alt="img" />
+                  <div class="shopping__item-box">
+                    <h3 class="shopping__item-title">Lira Earrings</h3>
+                    <h4 class="shopping__item-subtitle">Black / Medium</h4>
+                    <h4 class="shopping__item-price">$ 20,00</h4>
                   </div>
+                  <div class="shopping__item-counter counter__item">
+                    <div class="counter__item-box">
+                      <button class="counter__item-btn decrement">-</button>
+                      <span class="counter__item-number result">1</span>
+                      <button class="counter__item-btn increment">+</button>
+                    </div>
+                  </div>
+
+                  <button class="close__btn">
+                    <img src="./img/icons/close.svg" alt="close btn" />
+                  </button>
+                </div>
+                <div class="shopping__item">
+                  <img src="./img/Img01.png" alt="img" />
+                  <div class="shopping__item-box">
+                    <h3 class="shopping__item-title">Lira Earrings</h3>
+                    <h4 class="shopping__item-subtitle">Black / Medium</h4>
+                    <h4 class="shopping__item-price">$ 20,00</h4>
+                  </div>
+                  <div class="shopping__item-counter counter__item">
+                    <div class="counter__item-box">
+                      <button class="counter__item-btn decrement">-</button>
+                      <span class="counter__item-number result">1</span>
+                      <button class="counter__item-btn increment">+</button>
+                    </div>
+                  </div>
+
+                  <button class="close__btn">
+                    <img src="./img/icons/close.svg" alt="close btn" />
+                  </button>
+                </div>
+                <div class="shopping__item">
+                  <img src="./img/Img01.png" alt="img" />
+                  <div class="shopping__item-box">
+                    <h3 class="shopping__item-title">Lira Earrings</h3>
+                    <h4 class="shopping__item-subtitle">Black / Medium</h4>
+                    <h4 class="shopping__item-price">$ 20,00</h4>
+                  </div>
+                  <div class="shopping__item-counter counter__item">
+                    <div class="counter__item-box">
+                      <button class="counter__item-btn decrement">-</button>
+                      <span class="counter__item-number result">1</span>
+                      <button class="counter__item-btn increment">+</button>
+                    </div>
+                  </div>
+                  <button class="close__btn">
+                    <img src="./img/icons/close.svg" alt="close btn" />
+                  </button>
+                </div>
+              </div>
+              <div class="shopping__items-btns">
+                <a href="./shopping-cart.html">
+                  <button class="shopping__items-update">update cart</button>
+                </a>
+                <div class="shopping__item-coupon">
+                  <input type="text" placeholder="Coupon Code" />
+                  <button class="shopping__items-apply">APPLY COUPON</button>
                 </div>
               </div>
             </div>
-            <div class="shopping__total"></div>
+            <div class="shopping__total">
+              <h2 class="shopping__total-title">Cart totals</h2>
+              <div class="shopping__subtotal">
+                <h2 class="shopping__subtotal-title">Subtotal</h2>
+                <p class="shopping__subtotal-price">$ 65,00</p>
+              </div>
+              <div class="shopping__shipping">
+                <h2 class="shopping__shipping-title">Shipping</h2>
+                <p class="shopping__subtotal-text">
+                  Shipping costs will be calculated once you have provided address.
+                </p>
+              </div>
+              <div class="shopping__calculating">
+                <div class="shopping__calculating-menu">
+                  <div class="shopping__btn-box">
+                    <button class="shopping__calculating-btn">CALCULATE SHIPPING</button>
+                    <img src="./img/icons/arrow-down.svg" alt="arrow-down" />
+                  </div>
+                  <div class="shopping__calculating-content">
+                    <input type="text" placeholder="SELECT A COUNTRY" />
+                    <input type="text" placeholder="CITY" />
+                    <input type="text" placeholder="POST CODE / ZIP" />
+                  </div>
+                  <a href="./shopping-cart.html">
+                    <button class="shopping__calculating-update">UPDATE TOTALS</button>
+                  </a>
+                </div>
+                <div class="shopping__calculating-total">
+                  <h2 class="shopping__calculating-total-text">TOTAl</h2>
+                  <p class="shopping__calculating-total-price">0</p>
+                </div>
+              </div>
+              <button class="shopping__proceed">PROCEED TO CHECKOUT</button>
+            </div>
           </div>
         </div>
       </section>

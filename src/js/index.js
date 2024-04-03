@@ -349,3 +349,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //#endregion
+//========================================================================================================================================================
+//#region dropdown menu cart
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".shopping__calculating-btn");
+  const content = document.querySelector(".shopping__calculating-content");
+
+  // Перевірка наявності елементів на сторінці
+  if (btn && content) {
+    btn.addEventListener("click", function () {
+      content.classList.toggle("active-dropdown");
+    });
+  }
+});
+
+//#endregion
+//========================================================================================================================================================
+//#region delete item
+document.addEventListener("DOMContentLoaded", function () {
+  const deleteItems = document.querySelectorAll(".close__btn");
+  if (!deleteItems) {
+    return;
+  }
+  deleteItems.forEach(function (btnCloseItem) {
+    btnCloseItem.addEventListener("click", function () {
+      const cartItem = this.closest(".shopping__item");
+      cartItem.remove();
+    });
+  });
+});
+
+//#endregion
