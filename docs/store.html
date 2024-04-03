@@ -29,17 +29,17 @@
         </ul>
         <ul class="header__icons">
           <li class="header__icon">
-            <a href="#" class="header__icon-list">
+            <a href="#" class="header__link">
               <img src="./img/icons/search-icon.svg" alt="search" />
             </a>
           </li>
           <li class="header__icon">
-            <a href="./shopping-cart.html" class="header__icon-list">
+            <a href="./shopping-cart.html" class="header__link">
               <img src="./img/icons/shopping-cart.svg" alt="shopping-cart" />
             </a>
           </li>
           <li class="header__icon">
-            <a href="./account.html" class="header__icon-list">
+            <a href="./account.html" class="header__link">
               <img src="./img/icons/user.svg" alt="user" />
             </a>
           </li>
@@ -52,13 +52,24 @@
   </div>
 </header>
 <div class="mobile-nav">
-	<ul class="mobile-nav__list">
-		<li><a href="#" class="active">Home</a></li>
-		<li><a href="#!">Services</a></li>
-		<li><a href="#!">About</a></li>
-		<li><a href="#!">Projects</a></li>
-		<li><a href="#!">Contact</a></li>
-	</ul>
+  <ul class="mobile-nav__list">
+    <li><a href="./store.html">Shop</a></li>
+    <li><a href="./blog.html">Blog</a></li>
+    <li><a href="./about.html">Our Story</a></li>
+    <div class="mobile-nav__box">
+      <li>
+        <a href="./search.html"><img src="./img/icons/search-icon.svg" alt="search-icon" /></a>
+      </li>
+      <li>
+        <a href="./shopping-cart.html"
+          ><img src="./img/icons/shopping-cart.svg" alt="shopping-cart"
+        /></a>
+      </li>
+      <li>
+        <a href="./account.html"><img src="./img/icons/user.svg" alt="user" /></a>
+      </li>
+    </div>
+  </ul>
 </div>
 
 
@@ -88,7 +99,9 @@
                   <img src="./img/img01.png" alt="img" class="item__img" />
                   <div class="img__hover">
                     <a href="#" class="img__hover-icon">
-                      <img src="./img/icons/shopping-cart.svg" alt="shopping-cart" />
+                      <button class="add-to-cart">
+                        <img src="./img/icons/shopping-cart.svg" alt="shopping-cart" />
+                      </button>
                     </a>
                     <a href="./shop-item.html" class="img__hover-icon"
                       ><img src="./img/icons/eye.svg" alt="eye"
