@@ -21,7 +21,12 @@
   @media (max-width: 774px) {
     right: -60%;
   }
-  right: -30%;
+  @media (max-width: 600px) {
+    right: -40%;
+  }
+  @media (max-width: 380px) {
+    right: -30%;
+  }
 }
 
 .mobile-nav a {
@@ -54,4 +59,10 @@
   display: flex;
   gap: 30px;
   margin-top: 50px;
+  background-color: #fff;
+  align-items: center;
+  padding: 15px 20px;
+}
+.mobile-nav__box > li > a {
+  display: flex;
 }

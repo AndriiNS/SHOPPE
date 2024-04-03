@@ -21,7 +21,7 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 560px 560px;
+    grid-template-columns: auto auto;
     gap: 90px;
     margin-top: 64px;
     margin-bottom: 200px;
@@ -163,6 +163,7 @@
     flex-direction: column;
     gap: 35px;
     margin-top: 100px;
+    padding-right: 30px;
   }
 
   // .shopping__total-title
@@ -225,6 +226,9 @@
     display: flex;
     gap: 80px;
     align-items: center;
+    img {
+      transition: all 0.3s ease 0s;
+    }
   }
 
   // .shopping__calculating-btn
@@ -367,4 +371,14 @@
   to {
     opacity: 1;
   }
+}
+.arrow-rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease 0s;
+}
+#countryList {
+  display: none;
+}
+.country-list-active {
+  display: block;
 }
