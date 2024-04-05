@@ -25,6 +25,9 @@
     gap: 90px;
     margin-top: 64px;
     margin-bottom: 200px;
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   // .shopping__items
@@ -58,6 +61,12 @@
     }
     img {
       max-width: 136px;
+    }
+    @media (max-width: 500px) {
+      display: grid;
+      grid-template-columns: 140px auto;
+      gap: 10px;
+      justify-content: normal;
     }
   }
 
@@ -179,6 +188,9 @@
   &__subtotal {
     display: flex;
     gap: 128px;
+    @media (max-width: 1100px) {
+      gap: 50px;
+    }
   }
 
   // .shopping__subtotal-title
@@ -324,6 +336,9 @@
       background-color: #fff;
       color: #000;
     }
+    @media (max-width: 1100px) {
+      padding: 16px 40px;
+    }
   }
 }
 
@@ -340,6 +355,10 @@
     gap: 24px;
     background-color: #efefef;
     padding: 16px 14px;
+    @media (max-width: 500px) {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   // .counter__item-btn
@@ -354,6 +373,11 @@
 }
 .close__btn {
   align-self: flex-start;
+  @media (max-width: 500px) {
+    align-self: baseline;
+    position: absolute;
+    right: 10px;
+  }
 }
 .shopping__calculating-content {
   display: none;
